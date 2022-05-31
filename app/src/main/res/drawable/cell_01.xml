@@ -1,30 +1,18 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-
     <item>
         <shape android:shape="rectangle">
-            <padding android:bottom="2dp" />
             <solid android:color="@color/cell_color" />
         </shape>
     </item>
 
-    <item>
-        <shape android:shape="rectangle">
-            <padding android:right="2dp" />
-            <solid android:color="@color/cell_color" />
-        </shape>
-    </item>
 
-    <item>
+    <item
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp">
         <shape android:shape="rectangle">
-            <padding android:left="2dp" />
-            <solid android:color="@color/cell_color" />
-        </shape>
-    </item>
-
-    <item>
-        <shape android:shape="rectangle">
-            <solid android:color="@android:color/white" />
+            <solid android:color="?android:attr/colorBackground" />
         </shape>
     </item>
 </layer-list>
