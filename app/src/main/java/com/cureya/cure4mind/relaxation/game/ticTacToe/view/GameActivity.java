@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.cureya.cure4mind.R;
@@ -29,7 +30,7 @@ public class GameActivity extends AppCompatActivity {
 
     public void promptForPlayers() {
         GameBeginDialog dialog = GameBeginDialog.newInstance(this);
-        dialog.setCancelable(false);
+        dialog.setCancelable(true);
         dialog.show(getSupportFragmentManager(), GAME_BEGIN_DIALOG_TAG);
     }
 
@@ -39,7 +40,7 @@ public class GameActivity extends AppCompatActivity {
 
     private void initDataBinding(String player1, String player2) {
         ActivityGameBinding activityGameBinding = DataBindingUtil.setContentView(this, R.layout.activity_game);
-        gameViewModel = ViewModelProviders.of(this).get(GameViewModel.class);
+        gameViewModel = new ViewModelProvider(this).get(GameViewModel.class);
         gameViewModel.init(player1, player2);
         activityGameBinding.setGameViewModel(gameViewModel);
         setUpOnGameEndListener();

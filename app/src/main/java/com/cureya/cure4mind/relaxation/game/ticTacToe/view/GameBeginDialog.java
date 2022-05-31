@@ -1,6 +1,7 @@
 package com.cureya.cure4mind.relaxation.game.ticTacToe.view;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -30,6 +31,8 @@ public class GameBeginDialog extends DialogFragment {
 
     private View rootView;
     private GameActivity activity;
+
+    private boolean isBackPressed = true;
 
     public static GameBeginDialog newInstance(GameActivity activity) {
         GameBeginDialog dialog = new GameBeginDialog();
@@ -77,6 +80,7 @@ public class GameBeginDialog extends DialogFragment {
     private void onDoneClicked() {
         if (isAValidName(player1Layout, player1) & isAValidName(player2Layout, player2)) {
             activity.onPlayersSet(player1, player2);
+            isBackPressed = false;
             dismiss();
         }
     }
@@ -128,6 +132,14 @@ public class GameBeginDialog extends DialogFragment {
                 player2 = s.toString();
             }
         });
+    }
+
+    @Override
+    public void onDismiss(@NonNull DialogInterface dialog) {
+        super.onDismiss(dialog);
+        if (isBackPressed){
+            requireActivity().onBackPressed();
+        }
     }
 }
 
