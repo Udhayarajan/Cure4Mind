@@ -479,4 +479,13 @@
             android:id="@+id/action_savedPost_to_postDetailFragment"
             app:destination="@id/postDetailFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/relaxationFilterFragment"
+        android:name="com.cureya.cure4mind.RelaxationFilterFragment"
+        android:label="fragment_relaxation_filter"
+        tools:layout="@layout/fragment_relaxation_filter" >
+        <action
+            android:id="@+id/action_relaxationFilterFragment_to_yogaDetailsFragment"
+            app:destination="@id/yogaDetailsFragment" />
+    </fragment>
 </navigation>

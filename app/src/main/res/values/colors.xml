@@ -25,6 +25,11 @@
 
     <!-- Relaxation -->
     <color name="music_player_button_background">@color/black</color>
+    <color name="card_background_yoga">#8F98FD</color>
+    <color name="card_background_music">#FE7747</color>
+    <color name="card_background_videos">#4DC591</color>
+    <color name="card_background_games">#64A4DA</color>
+    <color name="card_background_live_session">#FECC00</color>
     <!-- Settings -->
     <color name="content_background">#000000</color>
 

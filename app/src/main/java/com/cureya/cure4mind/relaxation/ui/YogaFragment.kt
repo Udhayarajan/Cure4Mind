@@ -2,8 +2,10 @@ package com.cureya.cure4mind.relaxation.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.cureya.cure4mind.R
@@ -15,7 +17,7 @@ import com.cureya.cure4mind.util.database
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
 
-class YogaFragment : Fragment() {
+class YogaFragment : Fragment(), Toolbar.OnMenuItemClickListener {
 
     private lateinit var adapter: FirebaseRecyclerAdapter<Yoga, YogaViewHolder>
     private lateinit var binding: FragmentRelaxationYogaBinding
@@ -51,6 +53,7 @@ class YogaFragment : Fragment() {
                 holder.bind(model)
             }
         }
+        binding.toolbar.setOnMenuItemClickListener(this)
 
         binding.yogaCardRecyclerView.adapter = adapter
         binding.yogaCardRecyclerView.itemAnimator = null
@@ -75,5 +78,15 @@ class YogaFragment : Fragment() {
     companion object {
         const val YOGA_LIST = "yoga"
         const val YOGA_TITLE = "title"
+    }
+
+    override fun onMenuItemClick(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.menu_yoga_filter -> {
+                findNavController().navigate(R.id.relaxationFilterFragment)
+                return true
+            }
+        }
+        return false
     }
 }

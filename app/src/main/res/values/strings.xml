@@ -85,7 +85,7 @@
     <string name="let_s_find_something_for_relaxation">Let\'s find something for Relaxation</string>
     <string name="music">Music</string>
     <string name="we_recommend_you_favourite_music">We recommend you favourite music</string>
-    <string name="breathe_with_mindfulness">Breathe with<br/>Mindfulness</string>
+    <string name="breathe_with_mindfulness">Breathe with<br />Mindfulness</string>
     <string name="music_seconds">%d seconds</string>
     <string name="video">Video</string>
     <string name="we_recommend_you_favorite_video">We recommend you favorite video</string>
@@ -178,6 +178,9 @@
         \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Cheer up !
     </string>
     <string name="games">Games</string>
+    <string name="menu_relax_playlist">Playlist</string>
+    <string name="menu_relax_favorite">Favorite</string>
+    <string name="what_are_you_feeling_recommended_yoga_poses_according_to_your_mood">What are you feeling?\nRecommended Yoga poses according\nto your mood !</string>
 
     <string-array name="blog_name">
         <item>Mental Health Disorders and How to Overcome them</item>
@@ -186,4 +189,29 @@
         <item>Music &amp; Our Mind</item>
         <item>Good Food Good Mood</item>
     </string-array>
+
+
+    <string-array name="yoga_types">
+        <item>Anxious</item>
+        <item>Guilty</item>
+        <item>Depressive/Sad</item>
+        <item>Obsessive\nthought</item>
+        <item>Angry</item>
+        <item>Apathetic</item>
+        <item>Mood Swings</item>
+        <item>Confused</item>
+    </string-array>
+
+    <!-->List of pose recommended<-->
+
+    <!-->For Anxious<-->
+    <string-array name="recommended_anxious">
+        <item>Hero Pose</item>
+        <item>Tree Pose</item>
+        <item>Triangle Pose</item>
+        <item>Standing Forward Bend</item>
+        <item>Fish Pose</item>
+        <item>Child\'s Pose</item>
+    </string-array>
+    <!--TODO: Add recommended poses for other yoga_types-->
 </resources>

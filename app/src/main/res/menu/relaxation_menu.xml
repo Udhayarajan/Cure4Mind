@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_relax_playlist"
+        android:title="@string/menu_relax_playlist" />
+    <item
+        android:id="@+id/menu_relax_favorite"
+        android:title="@string/menu_relax_favorite" />
+
+</menu>
