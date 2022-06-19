@@ -8,7 +8,7 @@
     app:cardCornerRadius="18dp"
     android:layout_margin="10dp"
     android:elevation="10dp"
-    tools:context=".RecommendedYogaPose">
+    tools:context=".relaxation.ui.RecommendedYogaPoseDialogFragment">
     <TextView
         android:padding="20dp"
         tools:text="Hero pose"

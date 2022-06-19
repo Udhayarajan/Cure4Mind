@@ -44,6 +44,11 @@ class RelaxationFragment : Fragment() {
                 )
             )
         }
+        binding.liveSessionFrame.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_relaxationFragment_to_liveSessionFragment
+            )
+        }
     }
 
     companion object {

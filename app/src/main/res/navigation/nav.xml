@@ -347,6 +347,9 @@
         <action
             android:id="@+id/action_relaxationFragment_to_gamesFragment"
             app:destination="@id/gamesFragment" />
+        <action
+            android:id="@+id/action_relaxationFragment_to_liveSessionFragment"
+            app:destination="@id/liveSessionFragment" />
     </fragment>
     <fragment
         android:id="@+id/videoFragment"
@@ -481,11 +484,47 @@
     </fragment>
     <fragment
         android:id="@+id/relaxationFilterFragment"
-        android:name="com.cureya.cure4mind.RelaxationFilterFragment"
+        android:name="com.cureya.cure4mind.relaxation.ui.YogaFilterFragment"
         android:label="fragment_relaxation_filter"
-        tools:layout="@layout/fragment_relaxation_filter" >
+        tools:layout="@layout/fragment_yoga_filter" >
         <action
             android:id="@+id/action_relaxationFilterFragment_to_yogaDetailsFragment"
             app:destination="@id/yogaDetailsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/liveSessionFragment"
+        android:name="com.cureya.cure4mind.relaxation.ui.live.LiveSessionFragment"
+        android:label="fragment_live_session"
+        tools:layout="@layout/fragment_relaxation_live_session" >
+        <action
+            android:id="@+id/action_liveSessionFragment_to_liveSessionDetailedFragment"
+            app:destination="@id/liveSessionDetailedFragment" />
+        <action
+            android:id="@+id/action_liveSessionFragment_to_myLiveSessionFragment"
+            app:destination="@id/myLiveSessionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/liveSessionDetailedFragment"
+        android:name="com.cureya.cure4mind.relaxation.ui.live.LiveSessionDetailedFragment"
+        android:label="fragment_live_session_detailed"
+        tools:layout="@layout/fragment_live_session_detailed" >
+        <argument
+            android:name="session_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/liveSessionRegisteredFragment"
+        android:name="com.cureya.cure4mind.relaxation.ui.live.LiveSessionRegisteredFragment"
+        android:label="fragment_live_session_registered"
+        tools:layout="@layout/fragment_live_session_registered" >
+        <argument
+            android:name="session_id"
+            app:argType="integer" />
+    </fragment>
+    <action android:id="@+id/action_global_liveSessionRegisteredFragment" app:destination="@id/liveSessionRegisteredFragment" />
+    <fragment
+        android:id="@+id/myLiveSessionFragment"
+        android:name="com.cureya.cure4mind.relaxation.ui.live.MyLiveSessionFragment"
+        android:label="fragment_my_live_session"
+        tools:layout="@layout/fragment_my_live_session" />
 </navigation>

@@ -28,6 +28,9 @@ class YogaFragment : Fragment(), Toolbar.OnMenuItemClickListener {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentRelaxationYogaBinding.inflate(inflater, container, false)
+        binding.toolbar.setNavigationOnClickListener {
+            requireActivity().onBackPressed()
+        }
         return binding.root
     }
 

@@ -21,8 +21,7 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/relaxation_menu"
-            app:navigationIcon="@drawable/back_icon">
+            app:menu="@menu/relaxation_menu">
 
             <TextView
                 android:id="@+id/label_relaxation"

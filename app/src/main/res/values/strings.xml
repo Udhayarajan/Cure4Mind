@@ -181,6 +181,8 @@
     <string name="menu_relax_playlist">Playlist</string>
     <string name="menu_relax_favorite">Favorite</string>
     <string name="what_are_you_feeling_recommended_yoga_poses_according_to_your_mood">What are you feeling?\nRecommended Yoga poses according\nto your mood !</string>
+    <string name="live_session">Live Session</string>
+    <string name="my_session">My Session</string>
 
     <string-array name="blog_name">
         <item>Mental Health Disorders and How to Overcome them</item>
@@ -213,5 +215,49 @@
         <item>Fish Pose</item>
         <item>Child\'s Pose</item>
     </string-array>
-    <!--TODO: Add recommended poses for other yoga_types-->
+    <!-->For Guilty<-->
+    <string-array name="recommended_guilty">
+        <item>Hero Pose</item>
+        <item>Tree Pose</item>
+        <item>Triangle Pose</item>
+        <item>Standing Forward Bend</item>
+        <item>Fish Pose</item>
+        <item>Child\'s pose</item>
+    </string-array>
+    <!-->For Depressive/Sad<-->
+    <string-array name="recommended_depressive">
+        <item>Standing Forward Bend</item>
+        <item>Child\'s Pose</item>
+    </string-array>
+    <!-->For Obsessive thought<-->
+    <string-array name="recommended_obsessive">
+        <item>SuryaNamaskar</item>
+        <item>Alternate nostril breathing</item>
+    </string-array>
+
+    <!-->For Angry<-->
+    <string-array name="recommended_angry">
+        <item>Child\’s Pose</item>
+        <item>Fish Pose</item>
+        <item>SittingPose</item>
+        <item>Shoulder Stand Pose</item>
+    </string-array>
+
+    <!-->For Apathetic<-->
+    <string-array name="recommended_apathetic">
+        <item>Child\’s Pose</item>
+        <item>Fish Pose</item>
+        <item>SittingPose</item>
+        <item>Shoulder Stand Pose</item>
+    </string-array>
+
+    <string-array name="recommended_mood_swings">
+        <item>SuryaNamaskar</item>
+        <item>Alternate nostril breathing</item>
+    </string-array>
+
+    <string-array name="recommended_confused">
+        <item>Fish Pose</item>
+        <item>Cobra pose</item>
+    </string-array>
 </resources>
