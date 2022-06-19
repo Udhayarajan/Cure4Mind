@@ -15,7 +15,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/youtube_fragment"
-            android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+            android:name="com.google.android.youtube.player.YouTubePlayerSupportFragmentX"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center" />

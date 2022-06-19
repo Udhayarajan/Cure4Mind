@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:paddingHorizontal="10dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/thumbnail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="50dp"
+        app:layout_constraintVertical_bias="0.2"
+        android:layout_height="50dp"
+        tools:src="@drawable/asset_relaxation_music_bg_one"/>
+    <TextView
+        android:id="@+id/title"
+        tools:text = "New"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter_bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/thumbnail"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
