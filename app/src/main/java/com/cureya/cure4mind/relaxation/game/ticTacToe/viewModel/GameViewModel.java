@@ -2,6 +2,10 @@ package com.cureya.cure4mind.relaxation.game.ticTacToe.viewModel;
 
 import static com.cureya.cure4mind.relaxation.game.ticTacToe.util.StringUtility.stringFromNumbers;
 
+import android.os.Build;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.databinding.ObservableArrayMap;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
@@ -20,10 +24,18 @@ public class GameViewModel extends ViewModel {
         cells = new ObservableArrayMap<>();
     }
 
-    public void onClickedCellAt(int row, int column) {
+    public void onClickedCellAt(int row, int column, View view) {
+        TextView textView = (TextView) view;
+
         if (game.cells[row][column] == null) {
             game.cells[row][column] = new Cell(game.currentPlayer);
             cells.put(stringFromNumbers(row, column), game.currentPlayer.value);
+            textView.setText(game.currentPlayer.value);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                textView.setTextColor(view.getResources().getColor(android.R.color.tab_indicator_text, null));
+            }else {
+                textView.setTextColor(view.getResources().getColor(android.R.color.tab_indicator_text));
+            }
             if (game.hasGameEnded())
                 game.reset();
             else
