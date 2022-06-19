@@ -14,10 +14,8 @@ import androidx.navigation.fragment.navArgs
 import com.cureya.cure4mind.R
 import com.cureya.cure4mind.databinding.FragmentRelaxationVideoBinding
 import com.cureya.cure4mind.util.API_KEY
-import com.google.android.youtube.player.YouTubePlayerSupportFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.youtube.player.YouTubeInitializationResult
-import com.google.android.youtube.player.YouTubePlayer
+import com.google.android.youtube.player.*
 
 class VideoFragment : Fragment() {
 
@@ -54,7 +52,7 @@ class VideoFragment : Fragment() {
     private fun initializeYoutubeFragment() {
         val videoUrl = navArgument.videoUrl
 
-        val youtubePlayerFragment = YouTubePlayerSupportFragment()
+        val youtubePlayerFragment = YouTubePlayerSupportFragmentX.newInstance()
         val transaction = childFragmentManager.beginTransaction()
         transaction.replace(R.id.youtube_fragment, youtubePlayerFragment)
         transaction.commit()
@@ -77,7 +75,7 @@ class VideoFragment : Fragment() {
                     provider: YouTubePlayer.Provider?,
                     p1: YouTubeInitializationResult?
                 ) {
-                    Log.e("VideoViewModel", "Video Player Failed")
+                    Log.e("VideoViewModel", "Video Player Failed $p1")
                 }
             }
         )
